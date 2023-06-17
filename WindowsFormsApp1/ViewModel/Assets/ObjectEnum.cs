@@ -1,0 +1,32 @@
+﻿namespace WindowsFormsApp1.Objects.Assets
+{
+    public enum ObjectEnum
+    {
+        MainCharacterAssetId,
+        FirekeeperAssetId,
+        VendorAssetId,
+        BlacksmithAssetId,
+        ArcherAssetId,
+        WarriorAssetId,
+        OgreAssetId,
+        MageAssetId,
+        GeneralRadahnAssetId,
+        MosquitoAssetId,
+        DungeonAssetId, 
+        ChestAssetId,
+        PlateAssetId, 
+        BootsAssetId, 
+        HelmetAssetId,
+        SwordAssetId, 
+        AxeAssetId,
+        SpearAssetId,
+        EnemyKillerAssetId,
+        DistanceDecreaserAssetId,
+        TimeDilatorAssetId,
+        HealthPotionAssetId,
+        DefensePotionAssetId,
+        SpeedPotionAssetId, 
+        KeyAssetId,
+        NoteAssetId
+    }
+}

@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C20FA764-5F26-459F-967B-9C177EAC970A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\Coordinates.cs" />
+    <Compile Include="Model\Creature.cs" />
+    <Compile Include="Model\Dungeon\Chest.cs" />
+    <Compile Include="Model\Dungeon\Dungeon.cs" />
+    <Compile Include="Model\Enemies\Archer.cs" />
+    <Compile Include="Model\Enemies\Enemy.cs" />
+    <Compile Include="Model\Enemies\EnemyFactory.cs" />
+    <Compile Include="Model\Enemies\GeneralRadahn.cs" />
+    <Compile Include="Model\Enemies\Mage.cs" />
+    <Compile Include="Model\Enemies\Mosquito.cs" />
+    <Compile Include="Model\Enemies\Ogre.cs" />
+    <Compile Include="Model\Enemies\Warrior.cs" />
+    <Compile Include="Model\GameObject.cs" />
+    <Compile Include="Model\Inventory.cs" />
+    <Compile Include="Model\Item\Armor.cs" />
+    <Compile Include="Model\Item\ArmorTypes\Boots.cs" />
+    <Compile Include="Model\Item\ArmorTypes\Helmet.cs" />
+    <Compile Include="Model\Item\ArmorTypes\Plate.cs" />
+    <Compile Include="Model\Item\ChestKey.cs" />
+    <Compile Include="Model\Item\GlobalEffectItem\DistanceDecreaser.cs" />
+    <Compile Include="Model\Item\GlobalEffectItem\EnemyKiller.cs" />
+    <Compile Include="Model\Item\GlobalEffectItem\TimeDilator.cs" />
+    <Compile Include="Model\Item\IActionable.cs" />
+    <Compile Include="Model\Item\Item.cs" />
+    <Compile Include="Model\Item\ItemAssetFactory\ItemAsset.cs" />
+    <Compile Include="Model\Item\ItemAssetFactory\ItemAssetsFactory.cs" />
+    <Compile Include="Model\Item\ItemEnum\ArmorEnum.cs" />
+    <Compile Include="Model\Item\ItemEnum\PotionEnum.cs" />
+    <Compile Include="Model\Item\ItemEnum\PotionType.cs" />
+    <Compile Include="Model\Item\ItemEnum\RarityEnum.cs" />
+    <Compile Include="Model\Item\Note.cs" />
+    <Compile Include="Model\Item\Potion.cs" />
+    <Compile Include="Model\Item\Weapon.cs" />
+    <Compile Include="Model\Item\WeaponType\Axe.cs" />
+    <Compile Include="Model\Item\WeaponType\Spear.cs" />
+    <Compile Include="Model\Item\WeaponType\Sword.cs" />
+    <Compile Include="Model\MainCharacter.cs" />
+    <Compile Include="Model\NPC\Blacksmith.cs" />
+    <Compile Include="Model\NPC\Firekeeper.cs" />
+    <Compile Include="Model\NPC\NPC.cs" />
+    <Compile Include="Model\NPC\NPCfactory.cs" />
+    <Compile Include="Model\NPC\Vendor.cs" />
+    <Compile Include="Model\ObjectType.cs" />
+    <Compile Include="ViewModel\Assets\Asset.cs" />
+    <Compile Include="ViewModel\Assets\AssetFactory.cs" />
+    <Compile Include="ViewModel\Assets\ObjectEnum.cs" />
+    <Compile Include="ViewModel\GameEngine.cs" />
+    <Compile Include="ViewModel\Interactions\Interaction.cs" />
+    <Compile Include="ViewModel\Interactions\InteractionFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\DialogWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DialogWindow.Designer.cs">
+      <DependentUpon>DialogWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\InventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\InventoryForm.Designer.cs">
+      <DependentUpon>InventoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\NoteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\NoteForm.Designer.cs">
+      <DependentUpon>NoteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Program.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\DialogWindow.resx">
+      <DependentUpon>DialogWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\InventoryForm.resx">
+      <DependentUpon>InventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\NoteForm.resx">
+      <DependentUpon>NoteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GameAsset\Archer.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameAsset\armor_01d.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameAsset\axe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameAsset\Blacksmith.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameAsset\book_01d.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameAsset\boots_01d.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameAsset\Chest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameAsset\dungeon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameAsset\Firekeeper.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameAsset\GeneralRadahn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameAsset\helmet_02a.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameAsset\key_02c.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameAsset\Mage.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameAsset\MainCharacter.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameAsset\Mosquitto.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameAsset\Ogre.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameAsset\potion_01a.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameAsset\potion_01d.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameAsset\potion_01h.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameAsset\potion_02a.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameAsset\potion_02d.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameAsset\potion_02h.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameAsset\potion_03a.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameAsset\potion_03d.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameAsset\potion_03f.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameAsset\potion_03h.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameAsset\scroll_01d.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameAsset\skull_01a.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameAsset\spellbook_01c.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameAsset\staff_01d.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameAsset\sword_03c.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameAsset\Vendor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameAsset\Warrior.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
